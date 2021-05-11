@@ -1,0 +1,25 @@
+$메인컬러: #ff0000;
+@mixin 함수() {
+  background-color: #eeeeee;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.red {
+  color: $메인컬러;
+}
+
+.my-alert {
+  @include 함수();
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.my-alert-yellow {
+  @extend .my-alert;
+  background-color: #ffe591;
+}
